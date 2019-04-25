@@ -21,8 +21,9 @@ class QuestionController {
 	}
 	
 	func deleteQuestion(question: Question) {
-		guard let i = questions.index(of: question) else { return }
+		guard let i = questions.firstIndex(of: question) else { return }
 		questions.remove(at: i)
+		
 
 	}
 	

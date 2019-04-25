@@ -27,7 +27,9 @@ class QuestionsTableViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 		if editingStyle == .delete {
 			print("delete")
+			questionController.deleteQuestion(question: questionController.questions[indexPath.row])
 		}
+		tableView.reloadData()
 	}
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
