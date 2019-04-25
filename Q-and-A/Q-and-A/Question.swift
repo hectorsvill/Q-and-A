@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Question {
+struct Question: Equatable {
 	init(question: String, asker: String, answer: String? = nil, answerer: String? = nil) {
 		self.question = question
 		self.asker = asker
@@ -16,8 +16,8 @@ struct Question {
 		self.answerer = answerer
 	}
 	
-	var question: String
-	var asker: String
+	let question: String
+	let asker: String
 	var answer: String?
 	var answerer: String?
 	
