@@ -13,6 +13,8 @@ class QuestionsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Ask Question", style: .plain, target: self, action: #selector(askQuestion))
+		
     }
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return 10
@@ -26,5 +28,11 @@ class QuestionsTableViewController: UITableViewController {
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		print(indexPath.row)
+	}
+}
+
+extension QuestionsTableViewController {
+	@objc func askQuestion() {
+		print("askQuestion")
 	}
 }
