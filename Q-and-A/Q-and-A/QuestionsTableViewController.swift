@@ -24,6 +24,12 @@ class QuestionsTableViewController: UITableViewController {
 //		cell.textLabel?.text = "\(indexPath.row)"
 		return cell
 	}
+
+	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+		if editingStyle == .delete {
+			print("delete")
+		}
+	}
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		print(indexPath.row)
