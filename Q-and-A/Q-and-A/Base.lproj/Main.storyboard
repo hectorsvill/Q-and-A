@@ -90,6 +90,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="anwerLabel" destination="jZh-yc-dgK" id="WCH-GZ-FSo"/>
+                                    <outlet property="askedByLabel" destination="eZU-t2-7zb" id="AkG-6j-ned"/>
+                                    <outlet property="questionLabel" destination="7TW-c7-di6" id="1NT-52-4Ld"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

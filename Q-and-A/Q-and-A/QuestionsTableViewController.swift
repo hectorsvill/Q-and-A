@@ -12,10 +12,16 @@ class QuestionsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Ask Question", style: .plain, target: self, action: #selector(askQuestion))
+		
     }
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return questionController.questions.count
+		let count = questionController.questions.count
+		if count == 0 {
+			return 1
+		}
+		
+		return count
 	}
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -23,6 +29,7 @@ class QuestionsTableViewController: UITableViewController {
 		
 		return cell
 	}
+	
 
 	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 		if editingStyle == .delete {
@@ -34,6 +41,10 @@ class QuestionsTableViewController: UITableViewController {
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		print(indexPath.row)
+	}
+	
+	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return CGFloat(140)
 	}
 	
 	let questionController = QuestionController()
