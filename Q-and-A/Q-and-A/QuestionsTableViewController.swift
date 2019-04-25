@@ -21,7 +21,7 @@ class QuestionsTableViewController: UITableViewController {
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath)
-		cell.textLabel?.text = "\(indexPath.row)"
+//		cell.textLabel?.text = "\(indexPath.row)"
 		return cell
 	}
 	
