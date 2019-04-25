@@ -9,10 +9,17 @@
 import Foundation
 
 class QuestionController {
-	var questions: [Question] = []
-	
 	func createQuestion(question: String, asker: String) {
 		let question = Question(question: question, asker: asker)
+		questions.append(question)
 	}
 	
+	func updateQuestion(question: Question, answer: String, answerer: String) {
+		var question = question
+		question.answer = answer
+		question.answerer = answerer
+	}
+	
+	
+	var questions: [Question] = []
 }
