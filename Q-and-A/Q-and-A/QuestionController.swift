@@ -20,8 +20,12 @@ class QuestionController {
 		question.answerer = answerer
 	}
 	
-	func deleteQuestion(delete question: Question, index: Int) {
-		questions.remove(at: index)
+	func deleteQuestion(delete question: Question) {
+		for (i, q) in questions.enumerated() {
+			if q.asker == question.asker && q.question == question.question {
+				questions.remove(at: i)
+			}
+		}
 	}
 	
 	
