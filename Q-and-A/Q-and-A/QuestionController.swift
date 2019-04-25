@@ -20,6 +20,10 @@ class QuestionController {
 		question.answerer = answerer
 	}
 	
+	func deleteQuestion(delete question: Question, index: Int) {
+		questions.remove(at: index)
+	}
+	
 	
 	var questions: [Question] = []
 }
