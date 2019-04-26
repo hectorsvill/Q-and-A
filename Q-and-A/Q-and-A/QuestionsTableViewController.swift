@@ -9,9 +9,13 @@
 import UIKit
 
 class QuestionsTableViewController: UITableViewController {
-    override func viewDidLoad() {
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		tableView.reloadData()
+	}
+	
+	override func viewDidLoad() {
         super.viewDidLoad()
-//		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Ask Question", style: .plain, target: self, action: #selector(askQuestion))
 		navigationController?.navigationBar.prefersLargeTitles = true
     }
 	
