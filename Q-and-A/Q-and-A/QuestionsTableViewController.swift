@@ -12,17 +12,19 @@ class QuestionsTableViewController: UITableViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		tableView.reloadData()
+		print(questionController.questions.count)
 	}
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
 		navigationController?.navigationBar.prefersLargeTitles = true
+
     }
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == "askSegue" {
 			guard let vc = segue.destination as? AskQuestionViewController else { return }
-			
+			vc.questionController = questionController
 		} else if segue.identifier == "AnswerViewSegue" {
 			guard let vc = segue.destination as? AnswerViewController,
 			let cell = sender as? QuestionTableViewCell
@@ -33,7 +35,6 @@ class QuestionsTableViewController: UITableViewController {
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		let count = questionController.questions.count
-		
 		return count
 	}
 	
@@ -44,22 +45,12 @@ class QuestionsTableViewController: UITableViewController {
 		questionCell.question = question
 		return cell
 	}
-	
 
 	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 		if editingStyle == .delete {
-			print("delete")
 			questionController.deleteQuestion(question: questionController.questions[indexPath.row])
 		}
 		tableView.reloadData()
-	}
-	
-	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		print(indexPath.row)
-	}
-	
-	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		return CGFloat(140)
 	}
 	
 	let questionController = QuestionController()

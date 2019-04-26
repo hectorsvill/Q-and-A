@@ -23,15 +23,11 @@ class QuestionController {
 	func deleteQuestion(question: Question) {
 		guard let i = questions.firstIndex(of: question) else { return }
 		questions.remove(at: i)
-		
-
 	}
 
 	init() {
 		questions.append(Question(question: "Who are you?", asker: "Hector"))
 		questions.append(Question(question: "What are you?", asker: "Hector"))
-		questions.append(Question(question: "How are you?", asker: "Hector"))
-		questions.append(Question(question: "When are you?", asker: "Hector"))
 	}
 	
 	var questions: [Question] = []
