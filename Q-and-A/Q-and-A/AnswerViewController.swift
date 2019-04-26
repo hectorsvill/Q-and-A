@@ -20,7 +20,8 @@ class AnswerViewController: UIViewController {
 		guard let q = question else { return }
 		QuestionLabel?.text = q.question
 		AskedByLabel?.text = q.asker
-		
+		answeredByTextField?.text = q.answer ?? ""
+		answerTextView?.text = q.answerer ?? ""
 	}
 	
 	@objc func updateQuestion() {
