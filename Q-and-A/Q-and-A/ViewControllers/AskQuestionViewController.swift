@@ -16,13 +16,13 @@ class AskQuestionViewController: UIViewController {
 	
 	@objc func saveQuestion() {
 		guard 	let name = nameTextField.text,
-				let question = questionTextView.text else { return }
+				let question = questionTextView.text
+			else { return }
 		
 		if !name.isEmpty || !question.isEmpty  {
 			questionController?.createQuestion(question: question, asker: name)
 		}
-		
-		
+
 		navigationController?.popViewController(animated: true)
 	}
 	

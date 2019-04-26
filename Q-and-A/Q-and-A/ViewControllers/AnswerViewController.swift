@@ -11,7 +11,7 @@ import UIKit
 class AnswerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-       title = question?.question
+		title = question?.question
 		setup()
 		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save Answer", style: .plain, target: self, action: #selector(updateQuestion))
     }
@@ -27,23 +27,22 @@ class AnswerViewController: UIViewController {
 	@objc func updateQuestion() {
 		guard let name = answeredByTextField.text,
 			let answer = answerTextView.text,
-			let question = question else { return }
+			let question = question
+		else { return }
 		
 		questionController?.updateQuestion(question: question, answer: answer, answerer: name)
 		print(question)
 		navigationController?.popViewController(animated: true)
 	}
 	
-	var questionController: QuestionController?
 	@IBOutlet var QuestionLabel: UILabel!
 	@IBOutlet var AskedByLabel: UILabel!
 	@IBOutlet var answeredByTextField: UITextField!
 	@IBOutlet var answerTextView: UITextView!
-	
+	var questionController: QuestionController?
 	var question: Question? {
 		didSet{
 			setup()
 		}
 	}
-
 }

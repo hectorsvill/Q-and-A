@@ -12,7 +12,6 @@ class QuestionsTableViewController: UITableViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		tableView.reloadData()
-//		print(questionController.questions.count)
 	}
 	
 	override func viewDidLoad() {
@@ -24,10 +23,10 @@ class QuestionsTableViewController: UITableViewController {
 		if segue.identifier == "askSegue" {
 			guard let vc = segue.destination as? AskQuestionViewController else { return }
 			vc.questionController = questionController
-			
 		} else if segue.identifier == "AnswerViewSegue" {
 			guard 	let vc = segue.destination as? AnswerViewController,
-					let cell = sender as? QuestionTableViewCell else { return }
+					let cell = sender as? QuestionTableViewCell
+			else { return }
 			
 			vc.question = cell.question
 			vc.questionController = questionController
@@ -51,6 +50,7 @@ class QuestionsTableViewController: UITableViewController {
 		if editingStyle == .delete {
 			questionController.deleteQuestion(question: questionController.questions[indexPath.row])
 		}
+		
 		tableView.reloadData()
 	}
 	
