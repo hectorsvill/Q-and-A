@@ -28,10 +28,10 @@ class QuestionController {
 	}
 
 	init() {
-//		questions.append(Question(question: "Who are you?", asker: "Hector"))
-//		questions.append(Question(question: "What are you?", asker: "Hector"))
-//		questions.append(Question(question: "How are you?", asker: "Hector"))
-//		questions.append(Question(question: "When are you?", asker: "Hector"))
+		questions.append(Question(question: "Who are you?", asker: "Hector"))
+		questions.append(Question(question: "What are you?", asker: "Hector"))
+		questions.append(Question(question: "How are you?", asker: "Hector"))
+		questions.append(Question(question: "When are you?", asker: "Hector"))
 	}
 	
 	var questions: [Question] = []

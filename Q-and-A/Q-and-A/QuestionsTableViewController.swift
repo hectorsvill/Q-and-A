@@ -12,14 +12,11 @@ class QuestionsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Ask Question", style: .plain, target: self, action: #selector(askQuestion))
-		
+		navigationController?.navigationBar.prefersLargeTitles = true
     }
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		let count = questionController.questions.count
-		if count == 0 {
-			return 1
-		}
 		
 		return count
 	}
@@ -52,6 +49,8 @@ class QuestionsTableViewController: UITableViewController {
 
 extension QuestionsTableViewController {
 	@objc func askQuestion() {
-		print("askQuestion")
+
+		let vc = AskQuestionViewController()
+		navigationController?.pushViewController(vc, animated: true)
 	}
 }

@@ -11,6 +11,7 @@
 		E8BCB6F822724C1D00343872 /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BCB6F722724C1D00343872 /* QuestionController.swift */; };
 		E8BCB6FA227255CA00343872 /* QuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BCB6F9227255CA00343872 /* QuestionsTableViewController.swift */; };
 		E8BCB6FC2272666E00343872 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BCB6FB2272666E00343872 /* QuestionTableViewCell.swift */; };
+		E8BCB6FF22728A1A00343872 /* AskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BCB6FE22728A1A00343872 /* AskQuestionViewController.swift */; };
 		E8C8B29D227242FE00F72576 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C8B29C227242FE00F72576 /* AppDelegate.swift */; };
 		E8C8B2A2227242FE00F72576 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8C8B2A0227242FE00F72576 /* Main.storyboard */; };
 		E8C8B2A4227242FF00F72576 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8C8B2A3227242FF00F72576 /* Assets.xcassets */; };
@@ -20,8 +21,9 @@
 /* Begin PBXFileReference section */
 		E8BCB6F52272492900343872 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		E8BCB6F722724C1D00343872 /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
-		E8BCB6F9227255CA00343872 /* QuestionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewController.swift; sourceTree = "<group>"; };
+		E8BCB6F9227255CA00343872 /* QuestionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionsTableViewController.swift; path = ../QuestionsTableViewController.swift; sourceTree = "<group>"; };
 		E8BCB6FB2272666E00343872 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		E8BCB6FE22728A1A00343872 /* AskQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskQuestionViewController.swift; sourceTree = "<group>"; };
 		E8C8B299227242FE00F72576 /* Q-and-A.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Q-and-A.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8C8B29C227242FE00F72576 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8C8B2A1227242FE00F72576 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E8BCB6FD227289D000343872 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				E8BCB6F9227255CA00343872 /* QuestionsTableViewController.swift */,
+				E8BCB6FE22728A1A00343872 /* AskQuestionViewController.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		E8C8B290227242FE00F72576 = {
 			isa = PBXGroup;
 			children = (
@@ -62,7 +73,7 @@
 			children = (
 				E8BCB6F52272492900343872 /* Question.swift */,
 				E8BCB6F722724C1D00343872 /* QuestionController.swift */,
-				E8BCB6F9227255CA00343872 /* QuestionsTableViewController.swift */,
+				E8BCB6FD227289D000343872 /* New Group */,
 				E8BCB6FB2272666E00343872 /* QuestionTableViewCell.swift */,
 				E8C8B29C227242FE00F72576 /* AppDelegate.swift */,
 				E8C8B2A0227242FE00F72576 /* Main.storyboard */,
@@ -146,6 +157,7 @@
 			files = (
 				E8BCB6F62272492900343872 /* Question.swift in Sources */,
 				E8BCB6FC2272666E00343872 /* QuestionTableViewCell.swift in Sources */,
+				E8BCB6FF22728A1A00343872 /* AskQuestionViewController.swift in Sources */,
 				E8C8B29D227242FE00F72576 /* AppDelegate.swift in Sources */,
 				E8BCB6F822724C1D00343872 /* QuestionController.swift in Sources */,
 				E8BCB6FA227255CA00343872 /* QuestionsTableViewController.swift in Sources */,
