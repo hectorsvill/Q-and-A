@@ -158,9 +158,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cyU-al-Xa1"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="ght-3C-tGV"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="nameTextField" destination="gpv-hr-Rgz" id="SCA-t2-EXs"/>
