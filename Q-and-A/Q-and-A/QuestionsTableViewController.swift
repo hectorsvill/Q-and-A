@@ -21,7 +21,8 @@ class QuestionsTableViewController: UITableViewController {
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == "askSegue" {
-//			guard let vc = segue.destination as? AskQuestionViewController else { return }
+			guard let vc = segue.destination as? AskQuestionViewController else { return }
+			
 		} else if segue.identifier == "AnswerViewSegue" {
 			guard let vc = segue.destination as? AnswerViewController,
 			let cell = sender as? QuestionTableViewCell
