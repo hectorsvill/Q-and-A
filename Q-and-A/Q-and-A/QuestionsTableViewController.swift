@@ -12,7 +12,7 @@ class QuestionsTableViewController: UITableViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		tableView.reloadData()
-		print(questionController.questions.count)
+//		print(questionController.questions.count)
 	}
 	
 	override func viewDidLoad() {

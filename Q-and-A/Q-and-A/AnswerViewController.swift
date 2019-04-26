@@ -30,6 +30,7 @@ class AnswerViewController: UIViewController {
 			let question = question else { return }
 		
 		questionController?.updateQuestion(question: question, answer: answer, answerer: name)
+		print(question)
 		navigationController?.popViewController(animated: true)
 	}
 	

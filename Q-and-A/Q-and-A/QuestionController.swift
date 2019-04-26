@@ -14,10 +14,14 @@ class QuestionController {
 		questions.append(question)
 	}
 	
+	
+	
 	func updateQuestion(question: Question, answer: String, answerer: String) {
-		var question = question
-		question.answer = answer
-		question.answerer = answerer
+		guard let i = questions.firstIndex(of: question) else { return }
+		questions[i].answerer = answerer
+		questions[i].answer = answer
+//		question.answer = answer
+//		question.answerer = answerer
 	}
 	
 	func deleteQuestion(question: Question) {
