@@ -94,6 +94,7 @@
                                     <outlet property="anwerLabel" destination="jZh-yc-dgK" id="WCH-GZ-FSo"/>
                                     <outlet property="askedByLabel" destination="eZU-t2-7zb" id="AkG-6j-ned"/>
                                     <outlet property="questionLabel" destination="7TW-c7-di6" id="1NT-52-4Ld"/>
+                                    <segue destination="Cw4-Sg-w1I" kind="show" identifier="AnswerViewSegue" id="7GQ-KZ-CQD"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -174,38 +175,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xKo-1Q-hux">
-                                <rect key="frame" x="0.0" y="44.000000000000028" width="375" height="446.66666666666669"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xKo-1Q-hux">
+                                <rect key="frame" x="0.0" y="88.000000000000028" width="375" height="394.66666666666674"/>
                                 <subviews>
-                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chy-Rl-xhb">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                        <items>
-                                            <navigationItem title="Title" id="wzL-sd-j3J">
-                                                <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="Eyf-Ui-cx8"/>
-                                            </navigationItem>
-                                        </items>
-                                    </navigationBar>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2s-cq-Fnc">
-                                        <rect key="frame" x="0.0" y="52" width="375" height="20.333333333333329"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2s-cq-Fnc">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTJ-2C-aaH">
-                                        <rect key="frame" x="0.0" y="80.333333333333329" width="375" height="20.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="28.333333333333329" width="375" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GsU-Qk-Gdj">
-                                        <rect key="frame" x="0.0" y="108.66666666666667" width="375" height="30.000000000000014"/>
+                                        <rect key="frame" x="0.0" y="56.666666666666657" width="375" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bCl-Kk-Ghy">
-                                        <rect key="frame" x="0.0" y="146.66666666666663" width="375" height="300"/>
+                                        <rect key="frame" x="0.0" y="94.666666666666657" width="375" height="300"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="300" id="3FQ-kE-XHj"/>
@@ -217,6 +209,11 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xKo-1Q-hux" firstAttribute="top" secondItem="Jat-M8-Knd" secondAttribute="top" constant="2.8421709430404007e-14" id="7N7-MP-Nwr"/>
+                            <constraint firstAttribute="trailing" secondItem="xKo-1Q-hux" secondAttribute="trailing" id="YeB-KY-dng"/>
+                            <constraint firstItem="xKo-1Q-hux" firstAttribute="leading" secondItem="Nh1-AE-hbQ" secondAttribute="leading" id="heR-yP-hUx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Jat-M8-Knd"/>
                     </view>
                     <connections>
@@ -228,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ICg-UF-DPO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3004" y="206"/>
+            <point key="canvasLocation" x="1872.8" y="360.59113300492612"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IVb-1j-v9P">

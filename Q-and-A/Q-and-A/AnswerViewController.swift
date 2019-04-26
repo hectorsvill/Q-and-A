@@ -13,15 +13,26 @@ class AnswerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       title = question?.question
+		setup()
     }
-    
+	private func setup() {
+		guard let q = question else { return }
+		QuestionLabel?.text = q.question
+		AskedByLabel?.text = q.asker
+		
+	}
+	
 	@IBOutlet var QuestionLabel: UILabel!
 	@IBOutlet var AskedByLabel: UILabel!
 	@IBOutlet var answeredByTextField: UITextField!
 	@IBOutlet var answerTextView: UITextView!
 	
-	
+	var question: Question? {
+		didSet{
+			setup()
+		}
+	}
 	
 
 	
