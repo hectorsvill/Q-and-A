@@ -20,7 +20,4 @@ struct Question: Equatable {
 	let asker: String
 	var answer: String?
 	var answerer: String?
-	
-	
-	
 }

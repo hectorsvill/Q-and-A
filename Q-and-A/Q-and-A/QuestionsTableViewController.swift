@@ -23,7 +23,9 @@ class QuestionsTableViewController: UITableViewController {
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath)
-		
+		guard let questionCell = cell as? QuestionTableViewCell else  { return cell}
+		let question = questionController.questions[indexPath.row]
+		questionCell.question = question
 		return cell
 	}
 	
