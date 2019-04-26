@@ -11,9 +11,15 @@ import UIKit
 class QuestionsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Ask Question", style: .plain, target: self, action: #selector(askQuestion))
+//		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Ask Question", style: .plain, target: self, action: #selector(askQuestion))
 		navigationController?.navigationBar.prefersLargeTitles = true
     }
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "askSegue" {
+			guard let vc = segue.destination as? AskQuestionViewController else { return }
+		}
+	}
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		let count = questionController.questions.count
@@ -49,10 +55,3 @@ class QuestionsTableViewController: UITableViewController {
 	let questionController = QuestionController()
 }
 
-extension QuestionsTableViewController {
-	@objc func askQuestion() {
-
-		let vc = AskQuestionViewController()
-		navigationController?.pushViewController(vc, animated: true)
-	}
-}

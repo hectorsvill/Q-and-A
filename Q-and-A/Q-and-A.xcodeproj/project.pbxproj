@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E83BB30C22729D6700A5AF5F /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83BB30B22729D6700A5AF5F /* AnswerViewController.swift */; };
 		E8BCB6F62272492900343872 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BCB6F52272492900343872 /* Question.swift */; };
 		E8BCB6F822724C1D00343872 /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BCB6F722724C1D00343872 /* QuestionController.swift */; };
 		E8BCB6FA227255CA00343872 /* QuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BCB6F9227255CA00343872 /* QuestionsTableViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E83BB30B22729D6700A5AF5F /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		E8BCB6F52272492900343872 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		E8BCB6F722724C1D00343872 /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
 		E8BCB6F9227255CA00343872 /* QuestionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				E8BCB6F722724C1D00343872 /* QuestionController.swift */,
 				E8BCB6F9227255CA00343872 /* QuestionsTableViewController.swift */,
 				E8BCB6FE22728A1A00343872 /* AskQuestionViewController.swift */,
+				E83BB30B22729D6700A5AF5F /* AnswerViewController.swift */,
 				E8BCB6FB2272666E00343872 /* QuestionTableViewCell.swift */,
 				E8C8B29C227242FE00F72576 /* AppDelegate.swift */,
 				E8C8B2A0227242FE00F72576 /* Main.storyboard */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8BCB6F62272492900343872 /* Question.swift in Sources */,
+				E83BB30C22729D6700A5AF5F /* AnswerViewController.swift in Sources */,
 				E8BCB6FC2272666E00343872 /* QuestionTableViewCell.swift in Sources */,
 				E8BCB6FF22728A1A00343872 /* AskQuestionViewController.swift in Sources */,
 				E8C8B29D227242FE00F72576 /* AppDelegate.swift in Sources */,
