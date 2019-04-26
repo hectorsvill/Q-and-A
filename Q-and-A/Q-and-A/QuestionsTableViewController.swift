@@ -18,18 +18,19 @@ class QuestionsTableViewController: UITableViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 		navigationController?.navigationBar.prefersLargeTitles = true
-
     }
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == "askSegue" {
 			guard let vc = segue.destination as? AskQuestionViewController else { return }
 			vc.questionController = questionController
+			
 		} else if segue.identifier == "AnswerViewSegue" {
-			guard let vc = segue.destination as? AnswerViewController,
-			let cell = sender as? QuestionTableViewCell
-			else { return }
+			guard 	let vc = segue.destination as? AnswerViewController,
+					let cell = sender as? QuestionTableViewCell else { return }
+			
 			vc.question = cell.question
+			vc.questionController = questionController
 		}
 	}
 	
