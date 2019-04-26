@@ -30,8 +30,10 @@ class AnswerViewController: UIViewController {
 			let question = question
 		else { return }
 		
-		questionController?.updateQuestion(question: question, answer: answer, answerer: name)
-		print(question)
+		if !name.isEmpty || !answer.isEmpty {
+			questionController?.updateQuestion(question: question, answer: answer, answerer: name)
+		}
+		
 		navigationController?.popViewController(animated: true)
 	}
 	
